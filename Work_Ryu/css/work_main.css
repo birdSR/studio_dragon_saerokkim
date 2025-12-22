@@ -1,0 +1,1955 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Assistant:wght@700&family=Tai+Heritage+Pro&family=Viner+Hand+ITC&family=Zeyada&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Bcolor);
+    width: 100%;
+    height: 100%;
+    color: var(--Wcolor);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrap {
+    width: 100%;
+    /* overflow: hidden; */ /* sticky 작동을 위해 주석 처리 */
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Inner override for main_visual section */
+.inner:has(.main_visual) {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* main_visual */
+article.main_visual {
+    margin-top: 374px;
+    position: relative;
+    width: 100%;
+    height: 844px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 200px;
+    overflow: hidden;
+}
+
+/* Background */
+.main_visual_background {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.main_visual_background .background_image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+}
+
+.main_visual_background .gradient_overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 89.633%, rgba(13, 3, 28, 0.5) 94.816%, rgba(13, 3, 28, 1) 100%),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 66.854%, rgba(13, 3, 28, 1) 100%);
+}
+
+/* Main Wrapper */
+.main_visual_wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    z-index: 2;
+}
+
+.main_visual_wrapper .contents {
+    display: flex;
+    flex-direction: column;
+    gap: 392px;
+    align-items: flex-end;
+}
+
+/* Logo Area */
+.logo_area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 86.922%, rgba(102, 102, 102, 0) 100%);
+}
+
+.logo_area .netflix_logo {
+    width: 159px;
+    height: 44px;
+}
+
+.logo_area .global_badge {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 1;
+    color: #FFFFFF;
+}
+
+/* Contents Text */
+.contents_text {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    width: 100%;
+}
+
+/* Drama Title Area */
+.drama_title_area {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.drama_title_area .title_text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #FFFFFF;
+}
+
+.drama_title_area .title_text .series_label {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 200;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.drama_title_area .title_text .drama_title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 1;
+}
+
+.drama_title_area .bookmark_button {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.drama_title_area .bookmark_button img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Drama Content Box */
+.drama_content_box {
+    width: 100%;
+    height: auto;
+    min-height: 179px;
+    background: linear-gradient(180deg, rgba(136, 63, 254, 0.58) 0%, rgba(13, 3, 28, 0.58) 100%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    overflow: visible;
+    position: relative;
+    padding: 28px 0;
+}
+
+.drama_content_box .drama_text_wrapper {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+/* Text Box Left */
+.text_box_left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 679px;
+}
+
+.text_box_left .meta_info {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    white-space: pre-wrap;
+}
+
+.text_box_left .description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text_box_left .description p {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin: 0;
+    width: 100%;
+    max-width: 679px;
+    white-space: pre-wrap;
+}
+
+/* Text Box Right - Dual UL Structure */
+.text_box_right {
+    width: 583px;
+    display: flex;
+    gap: 20px;
+    padding-left: 32px;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.5);
+}
+
+.text_box_right .credit_labels,
+.text_box_right .credit_names {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.text_box_right .credit_labels .credit_label {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+
+.text_box_right .credit_names .credit_name {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #FFFFFF;
+}
+
+.text_box_right .credit_names .credit_name_multi p {
+    margin: 0;
+}
+/* article.main_visual */
+
+/* character */
+section.character {
+    width: 100%;
+    max-width: 1520px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 200px;
+}
+
+section.character h2 {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.3;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+section.character .contents {
+    position: relative;
+    width: 100%;
+    height: 710px;
+    /* max-width: 1452px; */
+}
+
+/* Arrow Images */
+section.character .contents .arrow {
+    position: absolute;
+    object-fit: contain;
+    display: block;
+}
+
+section.character .contents .arrow.arrow-1 {
+    width: 4.4%;
+    aspect-ratio: 64/42;
+    left: 11.8%;
+    top: 23.4%;
+}
+
+section.character .contents .arrow.arrow-2 {
+    width: 0.55%;
+    aspect-ratio: 8/150;
+    left: 21.9%;
+    top: 39.85%;
+    min-width: 4px;
+}
+
+section.character .contents .arrow.arrow-3 {
+    width: 3.65%;
+    aspect-ratio: 1/1;
+    left: 29.3%;
+    top: 27.5%;
+}
+
+section.character .contents .arrow.arrow-4 {
+    width: 17.2%;
+    aspect-ratio: 250/29;
+    left: 31.8%;
+    top: 15.8%;
+}
+
+section.character .contents .arrow.arrow-5 {
+    width: 1.86%;
+    aspect-ratio: 27/76;
+    left: 57.8%;
+    top: 41.7%;
+    min-width: 4px;
+}
+
+section.character .contents .arrow.arrow-6 {
+    width: 24.8%;
+    aspect-ratio: 360/331;
+    left: 60.2%;
+    top: 37.6%;
+}
+
+section.character .contents .arrow.arrow-7 {
+    width: 5.17%;
+    aspect-ratio: 75/45;
+    left: 64.4%;
+    top: 27.6%;
+}
+
+section.character .contents .arrow.arrow-8 {
+    width: 21.4%;
+    aspect-ratio: 310/40;
+    left: 64.6%;
+    top: 16.8%;
+}
+
+/* Human Styles */
+section.character .contents .human {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    font-size: 30px;
+}
+
+section.character .contents .human:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+section.character .contents .human:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 4px;
+}
+
+section.character .contents .human .human_img {
+    width: 160px;  /* 100% → 고정 크기로 변경 */
+    height: 219px;
+    aspect-ratio: 160/219;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;  /* 축소 방지 */
+    /* border-radius: 8px; */
+}
+
+section.character .contents .human .human_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+section.character .contents .human .human_name {
+    font-size: 30px;  /* 고정 크기 사용, 미디어쿼리에서 조정 */
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    width: 100%;
+}
+
+/* Human Positions */
+section.character .contents .human.human_yeo {
+    left: 0.4%;
+    top: 28.3%;
+}
+
+section.character .contents .human.human_dong {
+    left: 17.5%;
+    top: 0;
+}
+
+section.character .contents .human.human_hyeon {
+    left: 15.8%;
+    top: 63.7%;
+}
+
+section.character .contents .human.human_do {
+    left: 33%;
+    top: 36%;
+}
+
+section.character .contents .human.human_yeon {
+    left: 52.4%;
+    top: 3.1%;
+}
+
+section.character .contents .human.human_jae {
+    left: 53.1%;
+    top: 54.8%;
+}
+
+section.character .contents .human.human_hye {
+    left: 71.6%;
+    top: 30.7%;
+}
+
+section.character .contents .human.human_myeong {
+    left: 89.4%;
+    top: 8.7%;
+}
+
+section.character .contents .human.human_sa {
+    left: 89.4%;
+    top: 63.8%;
+}
+
+/* Human Name Colors and Fonts */
+section.character .contents .human .human_name.name_yeo {
+    font-family: 'Tai Heritage Pro', serif;
+    color: #f6e3bf;
+}
+
+section.character .contents .human .human_name.name_dong {
+    font-family: 'Tai Heritage Pro', serif;
+    color: #ffe2cf;
+}
+
+section.character .contents .human .human_name.name_hyeon {
+    font-family: 'Tai Heritage Pro', serif;
+    color: #f6e3bf;
+}
+
+section.character .contents .human .human_name.name_do {
+    font-family: 'Zeyada', cursive;
+    color: #f6e3bf;
+}
+
+section.character .contents .human .human_name.name_yeon {
+    font-family: 'Viner Hand ITC', cursive;
+    color: #ffe6b7;
+}
+
+section.character .contents .human .human_name.name_jae {
+    font-family: 'Viner Hand ITC', cursive;
+    color: #ffc0b1;
+}
+
+section.character .contents .human .human_name.name_hye {
+    font-family: 'Zeyada', cursive;
+    color: #afdaff;
+}
+
+section.character .contents .human .human_name.name_myeong {
+    font-family: 'Zeyada', cursive;
+    color: #f8ffb4;
+}
+
+section.character .contents .human .human_name.name_sa {
+    font-family: 'Viner Hand ITC', cursive;
+    color: #ffd8f9;
+}
+/* section.character */
+
+/* episode */
+section {
+    max-width: 1520px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+section.episode {
+    margin-bottom: 200px;
+}
+
+section.draggable_section {
+    margin-top: 200px;
+    margin-bottom: 200px;
+    /* padding-top: 50px; */
+}
+
+section .title_wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+section .title_wrapper .title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.3;
+    color: var(--Wcolor);
+    text-transform: uppercase;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+section .title_wrapper .more_btn {
+    padding: 8px 32px;
+    border: 1px solid var(--Wcolor);
+    border-radius: 32px;
+    background: transparent;
+    color: var(--Wcolor);
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0;
+}
+
+section .title_wrapper .more_btn:hover {
+    background-color: var(--Wcolor);
+    color: var(--Bcolor);
+}
+section .episode_scroll_container {
+    position: relative; /* 화살표 absolute 기준점 */
+    overflow-x: auto;
+    overflow-y: hidden;
+    cursor: grab;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scroll-behavior: auto; /* smooth 제거 - 부드러운 스크롤 */
+}
+
+section .episode_scroll_container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+section .episode_scroll_container.grabbing {
+    cursor: grabbing;
+}
+
+section .episode_scroll_container .episode_list {
+    display: flex;
+    gap: 50px;
+    padding-bottom: 20px;
+}
+
+
+section .episode_scroll_container .episode_list .episode_card {
+    min-width: 312px;
+    max-width: 312px;
+    width: 312px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    position: relative;
+}
+
+section .episode_scroll_container .episode_list .episode_card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_image {
+    width: 100%;
+    height: 261px; /* 비율 유지: 312 / 320 * 267 */
+    overflow: hidden;
+    border-radius: 0;
+    position: relative;
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+section .episode_scroll_container .episode_list .episode_card:hover .episode_image::after {
+    opacity: 1;
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+section .episode_scroll_container .episode_list .episode_card:hover .episode_image img {
+    transform: scale(1.05);
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_info {
+    background-color: #2B2B2B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_info .episode_title {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1;
+    color: var(--Wcolor);
+    margin: 0;
+    letter-spacing: 0;
+}
+
+section .episode_scroll_container .episode_list .episode_card .episode_info .episode_desc {
+    font-family: 'Assistant', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.3;
+    color: var(--Wcolor);
+    height: 104px;
+    overflow: hidden;
+    margin: 0;
+    letter-spacing: 0;
+}
+/* section.episode */
+
+/* Draggable Section */
+section.draggable_section {
+    position: relative;
+    width: 100%;
+    max-width: 1520px;
+    height: 100vh;
+    margin: 200px auto;
+    overflow: hidden;
+    background: 
+        radial-gradient(ellipse at 50% 50%, 
+            rgba(136,63,254,0.3) 0%, 
+            transparent 70%
+        ),
+        #0D031C;
+    box-sizing: border-box;
+}
+
+/* Image Items - 개별 사진 */
+section.draggable_section .img_item {
+    position: absolute;
+    cursor: grab;
+    transition: filter 0.3s ease;
+    will-change: transform;
+    user-select: none;
+    opacity: 0;
+}
+
+section.draggable_section .img_item:active {
+    cursor: grabbing;
+}
+
+/* 각 이미지별 고정 초기 위치 */
+section.draggable_section .img_item:nth-child(1) { left: 50px; top: 80px; }
+section.draggable_section .img_item:nth-child(2) { left: 320px; top: 30px; }
+section.draggable_section .img_item:nth-child(3) { left: 580px; top: 120px; }
+section.draggable_section .img_item:nth-child(4) { left: 850px; top: 60px; }
+section.draggable_section .img_item:nth-child(5) { left: 1100px; top: 150px; }
+section.draggable_section .img_item:nth-child(6) { left: 1320px; top: 40px; }
+
+section.draggable_section .img_item:nth-child(7) { left: 120px; top: 280px; }
+section.draggable_section .img_item:nth-child(8) { left: 400px; top: 350px; }
+section.draggable_section .img_item:nth-child(9) { left: 680px; top: 300px; }
+section.draggable_section .img_item:nth-child(10) { left: 950px; top: 380px; }
+section.draggable_section .img_item:nth-child(11) { left: 1200px; top: 320px; }
+section.draggable_section .img_item:nth-child(12) { left: 1350px; top: 420px; }
+
+section.draggable_section .img_item:nth-child(13) { left: 80px; top: 550px; }
+section.draggable_section .img_item:nth-child(14) { left: 350px; top: 600px; }
+section.draggable_section .img_item:nth-child(15) { left: 620px; top: 520px; }
+section.draggable_section .img_item:nth-child(16) { left: 900px; top: 580px; }
+
+section.draggable_section .img_item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+section.draggable_section .img_item:hover::after {
+    opacity: 0;
+}
+
+section.draggable_section .img_item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+section.draggable_section .img_item:hover img {
+    filter: brightness(1);
+}
+
+section.draggable_section .img_item:hover {
+    z-index: 100 !important;
+    transform: scale(1.05);
+}
+
+/* Size variants - 축소된 크기 */
+section.draggable_section .img_item[data-size="large"] {
+    width: 240px;
+    height: 160px;
+}
+
+section.draggable_section .img_item[data-size="medium"] {
+    width: 200px;
+    height: 133px;
+}
+
+section.draggable_section .img_item[data-size="small"] {
+    width: 150px;
+    height: 100px;
+}
+/* section.draggable_section */
+
+/* ============ DRAGGABLE SECTION CUSTOM CURSOR ============ */
+.draggable-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    display: none;
+    transform: translate(-50px, -50px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+section.draggable_section {
+    cursor: none;
+}
+
+section.draggable_section .img_item {
+    cursor: none;
+}
+
+section.draggable_section .img_item:active {
+    cursor: none;
+}
+/* ============================================ */
+
+/* ============ CURSOR RESTORATION (섹션별 분리) ============ */
+/* Behind Video 섹션 커서 복원 */
+section.behind_video,
+section.behind_video * {
+    cursor: auto !important;
+}
+
+section.behind_video button,
+section.behind_video a {
+    cursor: pointer !important;
+}
+
+/* Chat Event 섹션 커서 복원 */
+section.chat_event_section,
+section.chat_event_section * {
+    cursor: auto !important;
+}
+
+section.chat_event_section button,
+section.chat_event_section a {
+    cursor: pointer !important;
+}
+
+section.chat_event_section input[type="text"],
+section.chat_event_section textarea {
+    cursor: text !important;
+}
+
+/* Modal 커서 복원 */
+.image_modal {
+    cursor: auto !important;
+}
+
+.modal_close {
+    cursor: pointer !important;
+}
+/* ========================================================== */
+
+/* Modal */
+.image_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+}
+
+.image_modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_content {
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 3/2;
+    transform: scale(0.8);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image_modal.active .modal_content {
+    transform: scale(1);
+}
+
+.modal_content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+.modal_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    color: #F5F5F5;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: pointer;
+    line-height: 1;
+    padding: 5px 10px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.modal_close:hover {
+    transform: rotate(90deg) scale(1.1);
+    color: #ffffff;
+}
+/* .image_modal */
+
+/* behind */
+/* Wrapper for sticky control */
+.behind_video_wrapper {
+    height: 400vh; /* 스크롤 4배 길이 = Behind Video가 오래 고정됨 */
+}
+
+/* Section */
+section.behind_video {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Bcolor);
+    z-index: 10;
+}
+
+/* Title Wrapper */
+section.behind_video .title_wrapper {
+    width: 100%;
+    max-width: 1520px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+section.behind_video .section_title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #F5F5F5;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+section.behind_video .more_button {
+    padding: 8px 32px;
+    background: transparent;
+    border: 1px solid #F5F5F5;
+    border-radius: 32px;
+    font-family: 'Assistant', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    line-height: 1;
+}
+
+section.behind_video .more_button:hover {
+    background: #F5F5F5;
+    color: #0D031C;
+}
+
+/* Stack Container */
+section.behind_video .stack_container {
+    width: 100%;
+    max-width: 1520px;
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Video Item - 스택 구조 */
+section.behind_video .video_item {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 활성화 상태 - 중앙 1520px */
+section.behind_video .video_item.active {
+    width: 100%;
+    max-width: 1520px;
+    height: 404px;
+    opacity: 1;
+    z-index: 3;
+}
+
+/* 비활성화 상태 - 위/아래 1120px */
+section.behind_video .video_item.top,
+section.behind_video .video_item.bottom {
+    width: 100%;
+    max-width: 1120px;
+    height: 297px;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+section.behind_video .video_item.top {
+    transform: translate(-50%, -50%) translateY(-200px);
+}
+
+section.behind_video .video_item.bottom {
+    transform: translate(-50%, -50%) translateY(200px);
+}
+
+/* Video Thumbnail */
+section.behind_video .video_item.active .video_thumbnail {
+    width: 719px;
+    height: 404px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+section.behind_video .video_item.top .video_thumbnail,
+section.behind_video .video_item.bottom .video_thumbnail {
+    width: 555px;
+    height: 297px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+section.behind_video .video_thumbnail iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* active 상태 - 포스터 이미지 */
+section.behind_video .video_item.active .video_thumbnail img {
+    width: 719px;
+    height: 404px;
+    object-fit: cover;
+}
+
+/* top/bottom 상태 - 포스터 이미지 */
+section.behind_video .video_item.top .video_thumbnail img,
+section.behind_video .video_item.bottom .video_thumbnail img {
+    width: 555px;
+    height: 297px;
+    object-fit: cover;
+}
+
+/* 활성화 상태 - iframe 보이고 이미지 숨김 */
+section.behind_video .video_item.active .video_iframe {
+    display: block;
+}
+
+section.behind_video .video_item.active .video_poster {
+    display: none;
+}
+
+/* 비활성화 상태 - iframe 숨기고 이미지 보임 */
+section.behind_video .video_item.top .video_iframe,
+section.behind_video .video_item.bottom .video_iframe {
+    display: none;
+}
+
+section.behind_video .video_item.top .video_poster,
+section.behind_video .video_item.bottom .video_poster {
+    display: block;
+}
+
+/* Video Textbox */
+section.behind_video .video_item.active .video_textbox {
+    width: 100%;
+    max-width: 801px;
+    height: 404px;
+    background: #2B2B2B;
+    position: relative;
+    flex-shrink: 0;
+}
+
+section.behind_video .video_item.top .video_textbox {
+    width: 100%;
+    max-width: 565px;
+    height: 297px;
+    background: linear-gradient(180deg, rgba(13, 3, 28, 0.58) 0%, rgba(47, 10, 108, 0.58) 100%);
+    position: relative;
+    flex-shrink: 0;
+}
+
+section.behind_video .video_item.bottom .video_textbox {
+    width: 100%;
+    max-width: 565px;
+    height: 297px;
+    background: linear-gradient(180deg, rgba(47, 10, 108, 0.58) 0%, rgba(13, 3, 28, 0.58) 100%);
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Video Text */
+section.behind_video .video_text {
+    position: absolute;
+    left: 40px;
+    top: 32px;
+    width: calc(100% - 80px);
+    max-width: 732px;
+}
+
+section.behind_video .video_title_area {
+    margin-bottom: 40px;
+}
+
+section.behind_video .video_title {
+    font-family: 'Assistant', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #F5F5F5;
+    margin-bottom: 8px;
+    line-height: normal;
+}
+
+section.behind_video .video_subtitle {
+    font-family: 'Assistant', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #F5F5F5;
+    line-height: normal;
+}
+
+section.behind_video .video_description {
+    font-family: 'Assistant', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: #F5F5F5;
+    line-height: 1.5;
+}
+
+/* Video Pagination */
+section.behind_video .video_pagination {
+    position: absolute;
+    left: 40px;
+    top: 336px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-family: 'Assistant', sans-serif;
+    color: #F5F5F5;
+}
+
+section.behind_video .page_current {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 0;
+}
+
+section.behind_video .page_divider {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+section.behind_video .page_total {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* 비활성화 상태에서는 텍스트 숨김 */
+section.behind_video .video_item.top .video_text,
+section.behind_video .video_item.bottom .video_text,
+section.behind_video .video_item.top .video_pagination,
+section.behind_video .video_item.bottom .video_pagination {
+    opacity: 0;
+    pointer-events: none;
+}
+/* section.behind_video */
+/* ============ CUSTOM CURSOR ============ */
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    display: none;
+    transform: translate(-50px, -50px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+/* ============ SECTION CONTAINER ============ */
+/* ============================================
+   CHAT EVENT SECTION
+   섹션 전체: 100% (1920px)
+   내부 콘텐츠: 양쪽 200px 여백 → 1520px
+   ============================================ */
+
+/* .inner 컨테이너의 width 제약 무시 */
+.inner:has(.chat_event_section) {
+    width: 100%;
+    max-width: none;
+}
+
+section.chat_event_section {
+    position: relative;
+    width: 1920px;
+    max-width: 100%;
+    height: 1122px;
+    margin: 200px auto 0;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--Bcolor);
+    border-top: 1px solid var(--Bcolor);
+    border-bottom: none;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* ============ BACKGROUND IMAGE ============ */
+section.chat_event_section .img_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 1920px;
+    height: 1222px;
+    background: white;
+    filter: blur(2.5px);
+    z-index: 0;
+}
+
+section.chat_event_section .img_bg img {
+    position: absolute;
+    left: 50%;
+    top: -470px;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1920px;
+    height: 2769px;
+    object-fit: cover;
+    max-width: none;
+}
+
+/* ============ FIXED HEADER ============ */
+section.chat_event_section .header_fixed {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1920px;
+    padding: 50px 200px 40px;
+    background: linear-gradient(to bottom, #0d031c 0%, rgba(13, 3, 28, 0.6) 50%, rgba(13, 3, 28, 0) 100%);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+section.chat_event_section .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+section.chat_event_section .title_area {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+section.chat_event_section .title {
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+section.chat_event_section .btn_more {
+    padding: 8px 32px;
+    border: 1px solid white;
+    border-radius: 32px;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section.chat_event_section .btn_more:hover {
+    background: white;
+    color: #0d031c;
+}
+
+/* ============ FILTER AREA ============ */
+section.chat_event_section .filter_area {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+section.chat_event_section .filter_btn {
+    padding: 0;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+    transition: font-weight 0.2s, opacity 0.2s;
+    line-height: normal;
+    opacity: 0.5;
+}
+
+section.chat_event_section .filter_btn.active {
+    font-weight: 700;
+    opacity: 1;
+}
+
+section.chat_event_section .filter_btn:hover {
+    opacity: 0.8;
+}
+
+section.chat_event_section .filter_separator {
+    width: 1px;
+    height: 30px;
+    background: white;
+    flex-shrink: 0;
+}
+
+/* ============ SCROLLABLE CHAT AREA ============ */
+section.chat_event_section .chat_scroll_area {
+    position: absolute;
+    left: 50%;
+    top: 146px;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1520px;
+    height: 618px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, rgba(13, 3, 28, 0) 0%, rgba(60, 14, 130, 0) 96.51%);
+    z-index: 5;
+    padding: 16px 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+section.chat_event_section .chat_scroll_area:active {
+    cursor: none;
+}
+
+/* Custom Scrollbar */
+section.chat_event_section .chat_scroll_area::-webkit-scrollbar {
+    width: 8px;
+}
+
+section.chat_event_section .chat_scroll_area::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+section.chat_event_section .chat_scroll_area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+section.chat_event_section .chat_scroll_area::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* ============ COMMENTS LIST ============ */
+section.chat_event_section .comments_list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.chat_event_section .comment_item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ============ PROFILE ============ */
+section.chat_event_section .profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+section.chat_event_section .profile_icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+section.chat_event_section .profile_icon .icon_bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+section.chat_event_section .profile_icon .icon_img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 44px;
+    object-fit: cover;
+}
+
+section.chat_event_section .profile_name {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+section.chat_event_section .profile_name .name {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    cursor: pointer;
+}
+
+section.chat_event_section .profile_name .time {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 1;
+}
+
+/* ============ CONTENT ROW (채팅박스 + 하트) ============ */
+section.chat_event_section .content_row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-left: 48px;
+}
+
+section.chat_event_section .chat_box {
+    display: inline-block;
+    max-width: 95%;
+    padding: 6px 16px 8px 18px;
+    background: #f5f5f5;
+    border-radius: 0 20px 20px 20px;
+    cursor: text;
+    user-select: text;
+}
+
+section.chat_event_section .chat_box p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d031c;
+    line-height: 1.8;
+    word-wrap: break-word;
+    display: inline;
+}
+
+/* ============ LIKE BOX ============ */
+section.chat_event_section .like_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+section.chat_event_section .like_box .heart_icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+section.chat_event_section .like_box .heart_icon:hover {
+    transform: scale(1.1);
+}
+
+section.chat_event_section .like_box .like_count {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    line-height: 1;
+    margin-top: 2px;
+}/* ============ COMMENT ACTIONS ============ */
+section.chat_event_section .comment_actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 64px;
+}
+
+section.chat_event_section .btn_comment,
+section.chat_event_section .btn_replies {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    line-height: 1.5;
+}
+
+section.chat_event_section .btn_comment {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+section.chat_event_section .btn_comment.hidden {
+    display: none;
+}
+
+section.chat_event_section .btn_comment:hover,
+section.chat_event_section .btn_replies:hover {
+    opacity: 0.8;
+}
+
+section.chat_event_section .btn_replies {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+section.chat_event_section .btn_replies.active {
+    color: #9d7bff;
+}
+
+/* ============ REPLIES CONTAINER ============ */
+section.chat_event_section .replies_container {
+    margin-top: 20px;
+    padding-left: 64px;
+    display: none;
+}
+
+section.chat_event_section .replies_container.show {
+    display: block;
+}
+
+section.chat_event_section .reply_item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-left: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+section.chat_event_section .reply_item.fade-in {
+    animation: replyFadeIn 0.3s ease forwards;
+}
+
+@keyframes replyFadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section.chat_event_section .reply_header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+section.chat_event_section .reply_profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+section.chat_event_section .reply_profile .profile_icon {
+    width: 40px;
+    height: 40px;
+}
+
+section.chat_event_section .reply_profile .icon_bg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section.chat_event_section .reply_profile .icon_img {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+section.chat_event_section .reply_profile .profile_name {
+    gap: 12px;
+}
+
+section.chat_event_section .reply_profile .name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+section.chat_event_section .reply_profile .time {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+section.chat_event_section .reply_content_row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding-left: 52px;
+}
+
+section.chat_event_section .reply_text {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.5;
+}
+
+section.chat_event_section .reply_like_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+section.chat_event_section .reply_like_box .heart_icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+section.chat_event_section .reply_like_box .heart_icon:hover {
+    transform: scale(1.1);
+}
+
+section.chat_event_section .reply_like_box .like_count {
+    font-size: 8px;
+    font-weight: 600;
+    color: white;
+}
+
+/* ============ REPLY INPUT ============ */
+section.chat_event_section .reply_input_wrapper {
+    padding-left: 20px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+section.chat_event_section .reply_input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+section.chat_event_section .reply_input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+section.chat_event_section .reply_input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+section.chat_event_section .btn_reply_send {
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+section.chat_event_section .btn_reply_send:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============ MORE BUTTON ============ */
+section.chat_event_section .more_comments_wrapper {
+    display: flex;
+    justify-content: center;
+    padding: var(--gap-large) 0;
+}
+
+section.chat_event_section .btn_more_comments {
+    font-family: 'assistant', sans-serif;
+    padding: 12px 48px;
+    border: 1px solid white;
+    border-radius: 32px;
+    background: none;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+section.chat_event_section .btn_more_comments:hover {
+    background-color: var(--Wcolor);
+    color: var(--Bcolor);
+}
+
+section.chat_event_section .btn_more_comments:active {
+    transform: translateY(0);
+}
+
+/* ============ FIXED CHAT INPUT ============ */
+section.chat_event_section .chat_input_fixed {
+    position: absolute;
+    left: 50%;
+    bottom: 250px;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1520px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 0.5px solid rgba(13, 3, 28, 0.5);
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+section.chat_event_section .input_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+section.chat_event_section .input_text_area {
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 32px;
+}
+
+section.chat_event_section .chat_input {
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d031c;
+    outline: none;
+}
+
+section.chat_event_section .chat_input::placeholder {
+    color: #666666;
+    text-transform: uppercase;
+}
+
+section.chat_event_section .input_controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: auto;
+    margin-bottom: 12px;
+    padding: 0 32px;
+}
+
+section.chat_event_section .btn_emoji {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+}
+
+section.chat_event_section .btn_emoji:hover {
+    transform: scale(1.1);
+}
+
+section.chat_event_section .btn_emoji img {
+    width: 100%;
+    height: 100%;
+}
+
+section.chat_event_section .btn_send {
+    padding: 10px 32px;
+    border: 1px solid #0d031c;
+    background: #0d031c;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+section.chat_event_section .btn_send:hover {
+    background: transparent;
+    color: #0d031c;
+}
+
+/* ============ GRADIENT SEPARATOR ============ */
+section.chat_event_section .gradient_separator {
+    position: absolute;
+    left: 0;
+    bottom: 250px;
+    width: 100%;
+    height: 0;
+    z-index: 3;
+}
+
+/* ============ EVENT SECTION ============ */
+section.chat_event_section .event_section {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1920px;
+    height: 350px;
+    background: linear-gradient(to bottom, rgba(60, 14, 130, 0) 0%, rgba(37, 8, 79, 0.37) 23.929%, var(--Bcolor) 47.857%);
+    overflow: hidden;
+    z-index: 4;
+    box-sizing: border-box;
+}
+
+section.chat_event_section .event_box {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: var(--Bcolor);
+    border-top: 1px solid #4f485a;
+    width: 100%;
+    max-width: 1920px;
+    height: 200px;
+    padding: 0 200px;
+    box-sizing: border-box;
+}
+
+section.chat_event_section .event_img {
+    width: 50%;
+    max-width: 742px;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+
+section.chat_event_section .event_img img {
+    width: 100.06%;
+    height: 247.49%;
+    max-width: none;
+    object-fit: cover;
+    position: absolute;
+    top: -48.5%;
+    left: -0.03%;
+}
+
+section.chat_event_section .event_content {
+    flex: 1;
+    max-width: 778px;
+    height: 200px;
+    background: #220948;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    padding-left: 32px;
+}
+
+section.chat_event_section .event_inner {
+    width: auto;
+    height: 149px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+section.chat_event_section .event_txt {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+section.chat_event_section .event_title {
+    font-size: 36px;
+    font-weight: 300;
+    color: var(--Wcolor);
+    line-height: 100%;
+    font-family: 'Assistant', sans-serif;
+}
+
+section.chat_event_section .event_desc {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--Wcolor);
+    line-height: normal;
+    font-family: 'Assistant', sans-serif;
+}
+
+section.chat_event_section .btn_go {
+    padding: 8px 44px;
+    border: 1px solid var(--Wcolor);
+    border-radius: 32px;
+    background: transparent;
+    font: var(--font-1920_1024-button-S);
+    color: var(--Wcolor);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+section.chat_event_section .btn_go:hover {
+    background: var(--Wcolor);
+    color: var(--Bcolor);
+}
+
+/* ============ ANIMATIONS ============ */
+section.chat_event_section .comment_item.new-comment {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+section.chat_event_section .comment_item.new-comment.fade-in {
+    animation: fadeInSlide 0.4s ease forwards;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* footer */
