@@ -110,10 +110,12 @@ body {
     font-family: "Assistant", sans-serif;
     min-height: 5000px;
 }
-.wrap{
+
+.wrap {
     width: 100%;
     overflow-x: hidden;
 }
+
 .inner {
     width: 1520px;
     margin-inline: auto;
@@ -324,7 +326,8 @@ header nav .right .lang a.active {
     background: var(--Wcolor);
     color: var(--Bcolor);
 }
-header nav .right .nav_ham{
+
+header nav .right .nav_ham {
     display: none;
 }
 
@@ -341,7 +344,8 @@ header nav .right .nav_ham{
     backdrop-filter: blur(15px);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0.4s; /* 기본 transition 복원 */
+    transition: opacity 0.4s, visibility 0.4s;
+    /* 기본 transition 복원 */
     position: fixed;
     top: 40px;
     right: 40px;
@@ -375,21 +379,21 @@ header nav .right .nav_ham{
     transition: transform .6s;
 }
 
-nav.mobile ~ .ham ul li:nth-child(1) {
+nav.mobile~.ham ul li:nth-child(1) {
     transform: rotate(45deg);
     position: absolute;
-    right: 18%; 
+    right: 18%;
     top: 3%;
 }
 
-nav.mobile ~ .ham ul li:nth-child(2) {
+nav.mobile~.ham ul li:nth-child(2) {
     display: none;
 }
 
-nav.mobile ~ .ham ul li:nth-child(3) {
+nav.mobile~.ham ul li:nth-child(3) {
     transform: rotate(-45deg);
     position: absolute;
-    right: 18%; 
+    right: 18%;
     top: 4.2%;
 }
 
@@ -798,7 +802,7 @@ footer .footer_bottom .footer_brand {
     align-items: center;
     gap: 52px;
 }
-  
+
 footer .footer_bottom .footer_brand .footer_logo {
     width: 347px;
     height: 127px;
